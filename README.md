@@ -1,6 +1,6 @@
 # ColorPalette
 
-L'objectif du composant Palette est de permettre a un utilisateur de générer trois couleurs différentes en donnant les valeurs numériques de type HSL via un champ pour la teinte, la saturation et la lumière. L'utilisateur peut aussi le faire en utilisant des glissières qui mettrons automatiquement à jour les valeurs dans les champs associés.
+The purpose of the Palette component is to allow a user to generate three different colors by giving the numerical values of HSL type via a field for hue, saturation and light. The user can also do this by using sliders that will automatically update the values in the associated fields.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 

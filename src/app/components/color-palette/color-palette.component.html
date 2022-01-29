@@ -1,0 +1,77 @@
+<section>
+    <h2>PALETTE</h2>
+    <div class="color-palette">
+        <div class="color-palette__squares">
+            <div class="color-palette__squares__first" [style]="clrBase"></div>
+            <div class="color-palette__squares__second" [style]="clrAnalogue"></div>
+            <div class="color-palette__squares__third" [style]="clrComplementary"></div>
+        </div>
+        <div class="color-palette__inputs">
+            <div class="color-palette__inputs__first">
+                <label for="name">H</label>
+                <input 
+                    type="range" 
+                    class="color-palette__inputs__first__range" 
+                    min="0" 
+                    max="360" 
+                    [(ngModel)]="hue" 
+                    (change)="onChangeColors()"
+                >
+                <input 
+                    type="number" 
+                    class="color-palette__inputs__first__field" 
+                    min="0" 
+                    max="360" 
+                    [(ngModel)]="hue" 
+                    (change)="onChangeColors()"
+                >
+            </div>
+            <div class="color-palette__inputs__second">
+                <label for="name">S</label>
+                <input type="range" 
+                    class="color-palette__inputs__second__range" 
+                    min="0" 
+                    max="100"
+                    [(ngModel)]="saturation" 
+                    (change)="onChangeColors()"
+                >
+                <input 
+                    type="number" 
+                    class="color-palette__inputs__second__field" 
+                    min="0" 
+                    max="100"
+                    [(ngModel)]="saturation" 
+                    (change)="onChangeColors()"
+                >
+            </div>
+            <div class="color-palette__inputs__third">
+                <label for="name">L</label>
+                <input 
+                    type="range" 
+                    class="color-palette__inputs__third__range" 
+                    min="0" 
+                    max="100" 
+                    [(ngModel)]="lightness"
+                    (change)="onChangeColors()"
+                >
+                <input 
+                    type="number" 
+                    class="color-palette__inputs__third__field" 
+                    min="0" 
+                    max="100" 
+                    [(ngModel)]="lightness"
+                    (change)="onChangeColors()"
+                >
+            </div>
+        </div>
+    </div>
+    <div class="display__root">
+        <div class="display__root__code">
+            <p>:root {{'{'}}</p>
+            <p>--clr-primary: hsl({{hue}}, {{saturation}}%, {{lightness}}%);</p>
+            <p>--clr-secondary: hsl({{hue+30}}, {{saturation}}%, {{lightness}}%);</p>
+            <p>--clr-tertiary: hsl({{hue+180}}, {{saturation}}%, {{lightness}}%);</p>
+            <p>}</p>
+        </div> 
+    </div>
+</section>
