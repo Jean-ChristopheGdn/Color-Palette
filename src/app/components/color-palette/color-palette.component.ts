@@ -14,8 +14,8 @@ export class ColorPaletteComponent implements OnInit {
   lightness: number = 50;
 
   clrBase: string = `background-color : hsl(${this.hue}, ${this.saturation}%, ${this.lightness}%)`;
-  clrAnalogue: string = `background-color : hsl(${this.hue + 30}, ${this.saturation}%, ${this.lightness}%)`;
-  clrComplementary: string = `background-color : hsl(${this.hue + 180}, ${this.saturation}%, ${this.lightness}%)`;
+  clrAnalogue: string = `background-color : hsl(${this.analogueHue}, ${this.saturation}%, ${this.lightness}%)`;
+  clrComplementary: string = `background-color : hsl(${this.complementaryHue}, ${this.saturation}%, ${this.lightness}%)`;
 
   constructor() { }
 
